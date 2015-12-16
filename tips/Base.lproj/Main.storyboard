@@ -61,6 +61,9 @@
                                     <segment title="20%"/>
                                     <segment title="22%"/>
                                 </segments>
+                                <connections>
+                                    <action selector="onEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="bti-MT-6HM"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="wHO-Zx-u0m">
                                 <rect key="frame" x="160" y="92" width="151" height="30"/>
@@ -73,14 +76,24 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Ogo-4c-ktk" appends="YES" id="ebW-df-KL3"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="billField" destination="wHO-Zx-u0m" id="daB-xD-5x0"/>
+                        <outlet property="tipControl" destination="VUq-Th-1SU" id="zdJ-DK-VQq"/>
                         <outlet property="tipLabel" destination="Exa-rF-CxD" id="sde-mH-o5l"/>
                         <outlet property="totalLabel" destination="6hp-bQ-Sqv" id="jKE-AF-P9r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ogo-4c-ktk">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="uBz-cw-ypH"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="130" y="290"/>
         </scene>
