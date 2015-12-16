@@ -33,8 +33,9 @@ class ViewController: UIViewController {
         var tipAmount = billAmount * 0.2
         var total = billAmount + tipAmount
         
-        tipLabel.text = "$\(tipAmount)"
-        totalLabel.text = "$\(total)"
+        tipLabel.text = String(format: "$%.2f", tipAmount)
+        
+        totalLabel.text = String(format: "$%.2f", total)
         
     }
 
