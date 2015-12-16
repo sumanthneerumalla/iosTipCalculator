@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9772050C1C21E505006B25CB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9772050B1C21E505006B25CB /* SettingsViewController.swift */; };
 		97B716261C211A6F006C7A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B716251C211A6F006C7A9E /* AppDelegate.swift */; };
 		97B716281C211A6F006C7A9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B716271C211A6F006C7A9E /* ViewController.swift */; };
 		97B7162B1C211A6F006C7A9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B716291C211A6F006C7A9E /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9772050B1C21E505006B25CB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		97B716221C211A6F006C7A9E /* tips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97B716251C211A6F006C7A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97B716271C211A6F006C7A9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		97B716191C211A6E006C7A9E = {
 			isa = PBXGroup;
 			children = (
+				9772050B1C21E505006B25CB /* SettingsViewController.swift */,
 				97B716241C211A6F006C7A9E /* tips */,
 				97B716391C211A70006C7A9E /* tipsTests */,
 				97B716441C211A71006C7A9E /* tipsUITests */,
@@ -258,6 +261,7 @@
 			files = (
 				97B716281C211A6F006C7A9E /* ViewController.swift in Sources */,
 				97B716261C211A6F006C7A9E /* AppDelegate.swift in Sources */,
+				9772050C1C21E505006B25CB /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +488,7 @@
 				97B7164C1C211A71006C7A9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97B7164D1C211A71006C7A9E /* Build configuration list for PBXNativeTarget "tipsTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				97B7164F1C211A71006C7A9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97B716501C211A71006C7A9E /* Build configuration list for PBXNativeTarget "tipsUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				97B716521C211A71006C7A9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
