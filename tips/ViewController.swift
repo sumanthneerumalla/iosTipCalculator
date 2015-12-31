@@ -26,12 +26,6 @@ class ViewController: UIViewController {
         tipLabel.text = currency+"0.00"
         totalLabel.text = currency+"0.00"
         self.title = "Tip Calculator"
-        let defaults = NSUserDefaults.standardUserDefaults()
-        tipIndex = defaults.integerForKey("default_tip_rate")
-        var tipCurrency = ["$","€","£","¥","₹"]
-        var tipCurrencyIndex = defaults.integerForKey("default_currency_Index")
-        currency = tipCurrency[tipCurrencyIndex]
-        tipControl.selectedSegmentIndex = tipIndex
         
 
     }
@@ -53,7 +47,33 @@ class ViewController: UIViewController {
         totalLabel.text = String(format: currency+"%.2f", total)
         
     }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        print("view will appear")
+        let defaults = NSUserDefaults.standardUserDefaults()
+        tipIndex = defaults.integerForKey("default_tip_rate")
+        var tipCurrency = ["$","€","£","¥","₹"]
+        var tipCurrencyIndex = defaults.integerForKey("default_currency_Index")
+        currency = tipCurrency[tipCurrencyIndex]
+        tipControl.selectedSegmentIndex = tipIndex
 
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        print("view did appear")
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("view will disappear")
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("view did disappear")
+    }
+    
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
     }

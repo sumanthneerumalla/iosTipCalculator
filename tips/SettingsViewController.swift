@@ -9,6 +9,9 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    var tipIndex = 0
+    var currencyIndex = 0
 
     @IBOutlet weak var DefaultTipSelection: UISegmentedControl!
     
@@ -26,13 +29,38 @@ class SettingsViewController: UIViewController {
     
     @IBAction func DefaultTipChanged(sender: AnyObject) {
 
-        var tipIndex = DefaultTipSelection.selectedSegmentIndex
-        var currencyIndex = CurrencySelection.selectedSegmentIndex
+        tipIndex = DefaultTipSelection.selectedSegmentIndex
+        currencyIndex = CurrencySelection.selectedSegmentIndex
         
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(tipIndex, forKey: "default_tip_Index")
-        defaults.setInteger(tipIndex, forKey: "default_currency_Index")
+        defaults.setInteger(currencyIndex, forKey: "default_currency_Index")
         defaults.synchronize()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        print("view will appear")
+        let defaults = NSUserDefaults.standardUserDefaults()
+        tipIndex = defaults.integerForKey("default_tip_rate")
+        DefaultTipSelection.selectedSegmentIndex = tipIndex
+        currencyIndex = defaults.integerForKey("default_currency_Index")
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        print("view did appear")
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("view will disappear")
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("view did disappear")
     }
 
     /*
