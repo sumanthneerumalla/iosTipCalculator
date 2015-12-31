@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="130" y="290"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="Jmc-pR-6Ft">
             <objects>
-                <viewController id="oHj-ha-bHC" sceneMemberID="viewController">
+                <viewController id="oHj-ha-bHC" customClass="SettingsViewController" customModule="tips" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ULb-KR-j3q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jMg-qj-Kjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="313" y="350"/>
+            <point key="canvasLocation" x="1017" y="296"/>
         </scene>
     </scenes>
 </document>
