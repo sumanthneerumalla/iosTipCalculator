@@ -79,11 +79,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Tip Calculator" id="s4d-DV-X8b">
-                                        <barButtonItem key="rightBarButtonItem" title="Settings" id="3I3-gD-C5g">
-                                            <connections>
-                                                <segue destination="5N1-PD-gB1" kind="push" id="FFL-ca-HwL"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Settings" id="3I3-gD-C5g"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -111,21 +107,6 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="130" y="290"/>
-        </scene>
-        <!--Settings View Controller-->
-        <scene sceneID="yWY-0w-qsH">
-            <objects>
-                <viewController id="5N1-PD-gB1" customClass="SettingsViewController" customModule="tips" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MfY-aA-L13">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="HQ7-ba-QJh"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kuP-Le-jjG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="484" y="285"/>
         </scene>
     </scenes>
 </document>
