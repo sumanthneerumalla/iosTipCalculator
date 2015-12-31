@@ -17,16 +17,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipControl: UISegmentedControl!
     var tipRate = 0.18
     var tipIndex = 0
+    var currency = "$"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        tipLabel.text = "$0.00"
-        totalLabel.text = "$0.00"
+        tipLabel.text = currency+"0.00"
+        totalLabel.text = currency+"0.00"
         self.title = "Tip Calculator"
         let defaults = NSUserDefaults.standardUserDefaults()
-        tipRate = defaults.doubleForKey("default_tip_rate")
+        tipIndex = defaults.integerForKey("default_tip_rate")
+        var tipCurrency = ["$","€","£","¥","₹"]
+        var tipCurrencyIndex = defaults.integerForKey("default_currency_Index")
+        currency = tipCurrency[tipCurrencyIndex]
+        tipControl.selectedSegmentIndex = tipIndex
+        
 
     }
 
@@ -42,9 +48,9 @@ class ViewController: UIViewController {
         var tipAmount = billAmount * tipRate
         var total = billAmount + tipAmount
         
-        tipLabel.text = String(format: "$%.2f", tipAmount)
+        tipLabel.text = String(format: currency+"%.2f", tipAmount)
         
-        totalLabel.text = String(format: "$%.2f", total)
+        totalLabel.text = String(format: currency+"%.2f", total)
         
     }
 

@@ -12,6 +12,8 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var DefaultTipSelection: UISegmentedControl!
     
+    @IBOutlet weak var CurrencySelection: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -23,11 +25,13 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func DefaultTipChanged(sender: AnyObject) {
-        var DefaultTipPercentage = [0.18, 0.20, 0.22]
-        var tipRate = DefaultTipPercentage[DefaultTipSelection.selectedSegmentIndex]
+
+        var tipIndex = DefaultTipSelection.selectedSegmentIndex
+        var currencyIndex = CurrencySelection.selectedSegmentIndex
         
         let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setDouble(tipRate, forKey: "default_tip_rate")
+        defaults.setInteger(tipIndex, forKey: "default_tip_Index")
+        defaults.setInteger(tipIndex, forKey: "default_currency_Index")
         defaults.synchronize()
     }
 
