@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     
     @IBOutlet weak var tipControl: UISegmentedControl!
+    var tipRate = 0.18
+    var tipIndex = 0
     
     
     override func viewDidLoad() {
@@ -22,6 +24,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
+        self.title = "Tip Calculator"
+        let defaults = NSUserDefaults.standardUserDefaults()
+        tipRate = defaults.doubleForKey("default_tip_rate")
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +37,7 @@ class ViewController: UIViewController {
 
     @IBAction func onEditingChanged(sender: AnyObject) {
         var tipPercentages = [0.18, 0.20, 0.22]
-        var tipRate = tipPercentages[tipControl.selectedSegmentIndex]
+        tipRate = tipPercentages[tipControl.selectedSegmentIndex]
         var billAmount = NSString(string:   billField.text!).doubleValue
         var tipAmount = billAmount * tipRate
         var total = billAmount + tipAmount

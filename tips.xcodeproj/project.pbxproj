@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		97474F4D1C3589C10032828E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97474F4C1C3589C10032828E /* SettingsViewController.swift */; };
-		9772050C1C21E505006B25CB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9772050B1C21E505006B25CB /* SettingsViewController.swift */; };
 		97B716261C211A6F006C7A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B716251C211A6F006C7A9E /* AppDelegate.swift */; };
 		97B716281C211A6F006C7A9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B716271C211A6F006C7A9E /* ViewController.swift */; };
 		97B7162B1C211A6F006C7A9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B716291C211A6F006C7A9E /* Main.storyboard */; };
@@ -37,7 +36,6 @@
 
 /* Begin PBXFileReference section */
 		97474F4C1C3589C10032828E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		9772050B1C21E505006B25CB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../SettingsViewController.swift; sourceTree = "<group>"; };
 		97B716221C211A6F006C7A9E /* tips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97B716251C211A6F006C7A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97B716271C211A6F006C7A9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 		97B716241C211A6F006C7A9E /* tips */ = {
 			isa = PBXGroup;
 			children = (
-				9772050B1C21E505006B25CB /* SettingsViewController.swift */,
 				97B716251C211A6F006C7A9E /* AppDelegate.swift */,
 				97B716271C211A6F006C7A9E /* ViewController.swift */,
 				97B716291C211A6F006C7A9E /* Main.storyboard */,
@@ -264,7 +261,6 @@
 			files = (
 				97B716281C211A6F006C7A9E /* ViewController.swift in Sources */,
 				97B716261C211A6F006C7A9E /* AppDelegate.swift in Sources */,
-				9772050C1C21E505006B25CB /* SettingsViewController.swift in Sources */,
 				97474F4D1C3589C10032828E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

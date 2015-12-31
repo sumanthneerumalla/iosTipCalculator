@@ -91,7 +91,13 @@
                         </connections>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="kfc-8V-P55"/>
+                    <navigationItem key="navigationItem" id="kfc-8V-P55">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="tFw-Lf-tr1">
+                            <connections>
+                                <segue destination="oHj-ha-bHC" kind="push" id="0ky-cp-oj7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="billField" destination="wHO-Zx-u0m" id="daB-xD-5x0"/>
@@ -134,12 +140,43 @@
                     <view key="view" contentMode="scaleToFill" id="ULb-KR-j3q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="CWc-Id-6kk">
+                                <rect key="frame" x="17" y="162" width="286" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="22%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="DefaultTipChanged:" destination="oHj-ha-bHC" eventType="valueChanged" id="RbL-ge-Px3"/>
+                                    <action selector="onEditingChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="dii-lp-iQh"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Tip Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jwg-iN-8CB">
+                                <rect key="frame" x="86" y="118" width="148" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="sgO-is-5s4" appends="YES" id="wHk-1n-reb"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="jJr-L7-eW1"/>
+                    <connections>
+                        <outlet property="DefaultTipSelection" destination="CWc-Id-6kk" id="70C-AO-ypz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jMg-qj-Kjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sgO-is-5s4"/>
             </objects>
-            <point key="canvasLocation" x="1017" y="296"/>
+            <point key="canvasLocation" x="1031" y="348"/>
         </scene>
     </scenes>
 </document>
