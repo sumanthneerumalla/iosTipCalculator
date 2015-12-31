@@ -45,6 +45,8 @@ class SettingsViewController: UIViewController {
         tipIndex = defaults.integerForKey("default_tip_rate")
         DefaultTipSelection.selectedSegmentIndex = tipIndex
         currencyIndex = defaults.integerForKey("default_currency_Index")
+        CurrencySelection.selectedSegmentIndex = currencyIndex
+        defaults.synchronize()
         
     }
     
