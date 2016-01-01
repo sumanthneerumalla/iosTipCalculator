@@ -3,13 +3,6 @@
 Tip
 ==================
 
-Tip Calculator app for CodePath
-
-Initial bare working model:
-
-![](animation.gif)
-
-
 # Pre-work - *iosTipCalculator*
 
 **iosTipCalculator** is a tip calculator application for iOS.
@@ -37,11 +30,12 @@ The following **additional** features are implemented:
 ## Video Walkthrough 
 
 Basic version of app
- [](animation.gif)
+
+![](animation.gif)
 
 Final version of app with currencies and settings page using user defaults
 
-[](FinalAnimation.gif)
+![](FinalAnimation.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
